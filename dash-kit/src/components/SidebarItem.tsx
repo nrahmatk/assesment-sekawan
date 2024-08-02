@@ -11,12 +11,13 @@ export default function SidebarItem({ href, label }: SidebarItemProps) {
   const isActive = pathname === href;
 
   return (
-    <Link href={href}>
+    <Link href={href} className="flex h-14 items-center">
+      {isActive && <div className="bg-white h-full w-1"></div>}
       <p
-        className={`block px-4 py-2 rounded-md ${
+        className={`flex items-center h-full w-full px-7 ${
           isActive
-            ? "bg-blue-500 text-white"
-            : "text-gray-700 hover:bg-gray-200"
+            ? "bg-[#3e4049] text-slate-100"
+            : "text-gray-500 hover:bg-[#3e4049] hover:text-gray-400"
         }`}
       >
         {label}

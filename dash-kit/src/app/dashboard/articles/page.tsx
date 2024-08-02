@@ -1,7 +1,7 @@
 export default function Articles(){
     return (
-        <div className="flex">
-            <h1>Tickets</h1>
+        <div className="flex flex-1 justify-center items-center">
+            <h1>Articles</h1>
         </div>
     )
 }

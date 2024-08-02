@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
-    return NextResponse.json([{ title: "Ticket 1" }, { title: "Ticket 2" }]);
+    return NextResponse.json(16);
   } catch (error) {
     console.error(error);
     return NextResponse.json(
@@ -11,3 +11,5 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     );
   }
 }
+
+

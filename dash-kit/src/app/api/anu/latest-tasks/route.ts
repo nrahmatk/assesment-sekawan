@@ -3,8 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     return NextResponse.json([
-        { month: 'January', count: 30 },
-        { month: 'February', count: 20 },
+      { id: 1, name: "Finish ticket update", status: "URGENT" },
+      { id: 2, name: "Create new ticket example", status: "NEW" },
+      { id: 3, name: "Update ticket report", status: "DEFAULT" },
     ]);
   } catch (error) {
     console.error(error);

@@ -2,14 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
-    return NextResponse.json({ count: 58 });
+    const data = require('../data.json')
+
+    return NextResponse.json(data.tickets);
   } catch (error) {
-    console.error(error);
-    return NextResponse.json(
-      { message: "Internal Server Error" },
+    return new NextResponse(
+      JSON.stringify({ message: "Failed to fetch products" }),
       { status: 500 }
     );
   }
 }
-
-

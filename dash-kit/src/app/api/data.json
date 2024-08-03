@@ -1,0 +1,292 @@
+{
+  "user": [
+    {
+      "email": "user@mail.com",
+      "password": "password",
+      "role": "user"
+    },
+    {
+      "email": "admin@mail.com",
+      "password": "password",
+      "role": "admin"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Contact Email not Linked",
+      "customerName": "Tom Cruise",
+      "date": "2019-05-26T18:30:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-26T18:30:00"
+    },
+    {
+      "id": 2,
+      "title": "Adding Images to Featured Posts",
+      "customerName": "Matt Damon",
+      "date": "2019-05-26T08:00:00",
+      "priority": "LOW",
+      "status": "open",
+      "updated": "2019-05-26T08:00:00"
+    },
+    {
+      "id": 3,
+      "title": "When will I be charged this month?",
+      "customerName": "Robert Downey",
+      "date": "2019-05-26T19:30:00",
+      "priority": "HIGH",
+      "status": "overdue",
+      "updated": "2019-05-26T19:30:00"
+    },
+    {
+      "id": 4,
+      "title": "Payment not going through",
+      "customerName": "Christian Bale",
+      "date": "2019-05-25T17:00:00",
+      "priority": "NORMAL",
+      "status": "unresolved",
+      "updated": "2019-05-25T17:00:00"
+    },
+    {
+      "id": 5,
+      "title": "Unable to add replies",
+      "customerName": "Henry Cavil",
+      "date": "2019-05-25T16:00:c00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-25T16:00:00"
+    },
+    {
+      "id": 6,
+      "title": "Downtime since last week",
+      "customerName": "Chris Evans",
+      "date": "2019-05-25T14:00:00",
+      "priority": "NORMAL",
+      "status": "open",
+      "updated": "2019-05-25T14:00:00"
+    },
+    {
+      "id": 7,
+      "title": "Referral Bonus",
+      "customerName": "Sam Smith",
+      "date": "2019-05-25T11:30:00",
+      "priority": "LOW",
+      "status": "on hold",
+      "updated": "2019-05-25T11:30:00"
+    },
+    {
+      "id": 8,
+      "title": "How do I change my password?",
+      "customerName": "Steve Rogers",
+      "date": "2019-05-24T13:00:00",
+      "priority": "NORMAL",
+      "status": "unresolved",
+      "updated": "2019-05-24T13:00:00"
+    },
+    {
+      "id": 9,
+      "title": "Cannot access account",
+      "customerName": "Scarlett Johansson",
+      "date": "2019-05-24T10:00:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-24T10:00:00"
+    },
+    {
+      "id": 10,
+      "title": "Feature request: Dark mode",
+      "customerName": "Mark Ruffalo",
+      "date": "2019-05-24T09:00:00",
+      "priority": "LOW",
+      "status": "open",
+      "updated": "2019-05-24T09:00:00"
+    },
+    {
+      "id": 11,
+      "title": "Billing error",
+      "customerName": "Jeremy Renner",
+      "date": "2019-05-23T14:30:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-23T14:30:00"
+    },
+    {
+      "id": 12,
+      "title": "Account suspension",
+      "customerName": "Paul Rudd",
+      "date": "2019-05-23T11:00:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-23T11:00:00"
+    },
+    {
+      "id": 13,
+      "title": "Request for information",
+      "customerName": "Brie Larson",
+      "date": "2019-05-22T16:45:00",
+      "priority": "NORMAL",
+      "status": "open",
+      "updated": "2019-05-22T16:45:00"
+    },
+    {
+      "id": 14,
+      "title": "Subscription renewal",
+      "customerName": "Tom Hiddleston",
+      "date": "2019-05-22T13:00:00",
+      "priority": "NORMAL",
+      "status": "unresolved",
+      "updated": "2019-05-22T13:00:00"
+    },
+    {
+      "id": 15,
+      "title": "Account hacked",
+      "customerName": "Chris Hemsworth",
+      "date": "2019-05-22T09:30:00",
+      "priority": "HIGH",
+      "status": "overdue",
+      "updated": "2019-05-22T09:30:00"
+    },
+    {
+      "id": 16,
+      "title": "Can't update profile picture",
+      "customerName": "Natalie Portman",
+      "date": "2019-05-21T15:00:00",
+      "priority": "LOW",
+      "status": "open",
+      "updated": "2019-05-21T15:00:00"
+    },
+    {
+      "id": 17,
+      "title": "Order not received",
+      "customerName": "Sebastian Stan",
+      "date": "2019-05-21T12:00:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-21T12:00:00"
+    },
+    {
+      "id": 18,
+      "title": "Unable to download invoice",
+      "customerName": "Anthony Mackie",
+      "date": "2019-05-21T08:30:00",
+      "priority": "NORMAL",
+      "status": "open",
+      "updated": "2019-05-21T08:30:00"
+    },
+    {
+      "id": 19,
+      "title": "Change subscription plan",
+      "customerName": "Zoe Saldana",
+      "date": "2019-05-20T17:00:00",
+      "priority": "NORMAL",
+      "status": "on hold",
+      "updated": "2019-05-20T17:00:00"
+    },
+    {
+      "id": 20,
+      "title": "Login issues",
+      "customerName": "Chadwick Boseman",
+      "date": "2019-05-20T14:30:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-20T14:30:00"
+    },
+    {
+      "id": 21,
+      "title": "Feedback on new feature",
+      "customerName": "Tessa Thompson",
+      "date": "2019-05-20T10:00:00",
+      "priority": "LOW",
+      "status": "open",
+      "updated": "2019-05-20T10:00:00"
+    },
+    {
+      "id": 22,
+      "title": "Error 404 on website",
+      "customerName": "Don Cheadle",
+      "date": "2019-05-19T16:00:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-19T16:00:00"
+    },
+    {
+      "id": 23,
+      "title": "Feature request: Two-factor authentication",
+      "customerName": "Benedict Cumberbatch",
+      "date": "2019-05-19T12:00:00",
+      "priority": "NORMAL",
+      "status": "open",
+      "updated": "2019-05-19T12:00:00"
+    },
+    {
+      "id": 24,
+      "title": "Reset password",
+      "customerName": "Elizabeth Olsen",
+      "date": "2019-05-19T09:30:00",
+      "priority": "NORMAL",
+      "status": "unresolved",
+      "updated": "2019-05-19T09:30:00"
+    },
+    {
+      "id": 25,
+      "title": "Account locked",
+      "customerName": "Tom Holland",
+      "date": "2019-05-18T18:00:00",
+      "priority": "HIGH",
+      "status": "overdue",
+      "updated": "2019-05-18T18:00:00"
+    },
+    {
+      "id": 26,
+      "title": "How to upgrade account?",
+      "customerName": "Karen Gillan",
+      "date": "2019-05-18T14:30:00",
+      "priority": "NORMAL",
+      "status": "open",
+      "updated": "2019-05-18T14:30:00"
+    },
+    {
+      "id": 27,
+      "title": "Bug report: App crashes",
+      "customerName": "Dave Bautista",
+      "date": "2019-05-18T10:00:00",
+      "priority": "HIGH",
+      "status": "unresolved",
+      "updated": "2019-05-18T10:00:00"
+    },
+    {
+      "id": 28,
+      "title": "How to cancel subscription?",
+      "customerName": "Vin Diesel",
+      "date": "2019-05-17T17:00:00",
+      "priority": "NORMAL",
+      "status": "open",
+      "updated": "2019-05-17T17:00:00"
+    }
+  ],
+  "charts": [
+    { "name": "0", "Today": 10, "Yesterday": 15 },
+    { "name": "1", "Today": 15, "Yesterday": 20 },
+    { "name": "2", "Today": 25, "Yesterday": 18 },
+    { "name": "3", "Today": 20, "Yesterday": 25 },
+    { "name": "4", "Today": 30, "Yesterday": 28 },
+    { "name": "5", "Today": 22, "Yesterday": 35 },
+    { "name": "6", "Today": 28, "Yesterday": 32 },
+    { "name": "7", "Today": 35, "Yesterday": 30 },
+    { "name": "8", "Today": 40, "Yesterday": 38 },
+    { "name": "9", "Today": 38, "Yesterday": 42 },
+    { "name": "10", "Today": 45, "Yesterday": 40 },
+    { "name": "11", "Today": 50, "Yesterday": 45 },
+    { "name": "12", "Today": 55, "Yesterday": 50 },
+    { "name": "13", "Today": 60, "Yesterday": 55 },
+    { "name": "14", "Today": 38, "Yesterday": 48 },
+    { "name": "15", "Today": 45, "Yesterday": 50 },
+    { "name": "16", "Today": 50, "Yesterday": 60 },
+    { "name": "17", "Today": 48, "Yesterday": 58 },
+    { "name": "18", "Today": 52, "Yesterday": 62 },
+    { "name": "19", "Today": 55, "Yesterday": 65 },
+    { "name": "20", "Today": 60, "Yesterday": 70 },
+    { "name": "21", "Today": 65, "Yesterday": 72 }
+  ]
+}

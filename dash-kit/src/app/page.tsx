@@ -1,9 +1,16 @@
-import Image from "next/image";
+'use client'
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <h1>Welcome to the Dashboard</h1>
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    const isAuthenticated = false; 
+
+    if (!isAuthenticated) {
+      router.push('/login'); 
+    }
+  }, [router]);
+  return null
 }

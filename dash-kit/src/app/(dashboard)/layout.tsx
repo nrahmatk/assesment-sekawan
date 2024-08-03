@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <div className="flex bg-[#f7f8fc]">
       <Sidebar />
-      <div className="flex flex-col flex-1 ">
+      <div className="flex flex-col flex-1 md:ml-64 mt-14 md:mt-28">
         <Header />
         {children}
       </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ChartCoba from "@/components/Chart";
 import Link from "next/link";
+import Card from "@/components/OverviewCard";
+import OverviewChart from "@/components/OverviewChart";
 
 const Overview = () => {
   const [unresolvedCount, setUnresolvedCount] = useState(0);
@@ -12,16 +13,22 @@ const Overview = () => {
   const [resolvedCount, setResolvedCount] = useState(0);
   const [receivedCount, setReceivedCount] = useState(0);
   const [data, setData] = useState([]);
+  const [chartData, setChartData] = useState([]);
   const [currentDate, setCurrentDate] = useState<string>("");
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/tickets/");
+      const response = await fetch("/api/overview");
+      const responseChart = await fetch("/api/charts");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
+      if (!responseChart.ok) {
+        throw new Error("Failed to fetch data");
+      }
       const data = await response.json();
-      return data;
+      const dataChart = await responseChart.json();
+      return { data, dataChart };
     } catch (error) {
       console.error(error);
     }
@@ -31,23 +38,28 @@ const Overview = () => {
     const loadData = async () => {
       const fetchedData = await fetchData();
       if (fetchedData) {
-        setData(fetchedData);
+        setData(fetchedData.data);
         setUnresolvedCount(
-          fetchedData.filter((ticket) => ticket.status === "unresolved").length
+          fetchedData.data.filter((ticket) => ticket.status === "unresolved")
+            .length
         );
         setOverdueCount(
-          fetchedData.filter((ticket) => ticket.status === "overdue").length
+          fetchedData.data.filter((ticket) => ticket.status === "overdue")
+            .length
         );
         setOpenCount(
-          fetchedData.filter((ticket) => ticket.status === "open").length
+          fetchedData.data.filter((ticket) => ticket.status === "open").length
         );
         setOnHoldCount(
-          fetchedData.filter((ticket) => ticket.status === "on hold").length
+          fetchedData.data.filter((ticket) => ticket.status === "on hold")
+            .length
         );
         setResolvedCount(
-          fetchedData.filter((ticket) => ticket.status === "resolved").length
+          fetchedData.data.filter((ticket) => ticket.status === "resolved")
+            .length
         );
-        setReceivedCount(fetchedData.length);
+        setReceivedCount(fetchedData.data.length);
+        setChartData(fetchedData.dataChart);
       }
     };
     loadData();
@@ -56,12 +68,24 @@ const Overview = () => {
       day: "numeric",
       month: "short",
       year: "numeric",
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
     });
     setCurrentDate(date);
   }, []);
+
+  function calculateAverageFirstResponseTime() {
+    return "33m";
+  }
+
+  function calculateAverageResponseTime() {
+    return "3h 8m";
+  }
+
+  function calculateResolutionWithinSLA() {
+    return "94%";
+  }
 
   return (
     <div className="flex flex-col p-8">
@@ -75,7 +99,7 @@ const Overview = () => {
         <div className="w-full lg:w-3/4 flex flex-col p-4 lg:p-8">
           <h3 className="font-medium text-xl">Today's trends</h3>
           <p className="text-sm text-gray-400 mb-1">as of {currentDate}</p>
-          <ChartCoba />
+          <OverviewChart chartData={chartData} />
         </div>
         <div className="w-full lg:flex-1 flex flex-col justify-between text-center border-t lg:border-t-0 lg:border-l border-gray-200">
           <div className="flex-1 flex flex-col justify-center p-4 lg:border-b border-gray-100">
@@ -173,29 +197,5 @@ const Overview = () => {
     </div>
   );
 };
-
-function Card({ title, count }) {
-  return (
-    <div className="bg-white h-32 rounded-lg flex flex-col items-center flex-wrap justify-center border-2">
-      <div className="text-xl font-medium text-gray-400">{title}</div>
-      <div className="text-4xl font-medium text-gray-900 mt-3">{count}</div>
-    </div>
-  );
-}
-
-function calculateAverageFirstResponseTime() {
-  // Dummy implementation for demo purposes
-  return "33m";
-}
-
-function calculateAverageResponseTime() {
-  // Dummy implementation for demo purposes
-  return "3h 8m";
-}
-
-function calculateResolutionWithinSLA() {
-  // Dummy implementation for demo purposes
-  return "94%";
-}
 
 export default Overview;

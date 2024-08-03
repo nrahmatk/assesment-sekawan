@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -31,7 +30,7 @@ export default function Login() {
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
       setErrors({});
-      router.push("/overview");
+      router.push("/dashboard/overview");
     } else {
       setErrors(validationErrors);
     }
@@ -97,7 +96,16 @@ export default function Login() {
                 onClick={() => setShowPassword(!showPassword)}
                 style={{ color: "#7D848D" }}
               >
-                {showPassword ? <FaRegEye /> : <FaRegEyeSlash />}
+                {showPassword ? (
+                  <Image src="/svg/eye.svg" alt="Eye" width={24} height={24} />
+                ) : (
+                  <Image
+                    src="/svg/eye-off.svg"
+                    alt="Eye"
+                    width={24}
+                    height={24}
+                  />
+                )}
               </button>
             </div>
             {errors.password && (
@@ -113,10 +121,7 @@ export default function Login() {
         </form>
         <p className="mt-6 text-center text-sm text-gray-400">
           Don't have an account?{" "}
-          <Link
-            href="/signup"
-            className="text-blue-600 font-medium hover:underline"
-          >
+          <Link href="/signup" className="text-blue-600 font-medium hover:underline">
             Sign up
           </Link>
         </p>

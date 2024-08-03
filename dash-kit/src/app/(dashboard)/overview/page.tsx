@@ -97,7 +97,7 @@ const Overview = () => {
       </div>
       <div className="mt-6 flex flex-col lg:flex-row bg-white rounded-xl border border-gray-200">
         <div className="w-full lg:w-3/4 flex flex-col p-4 lg:p-8">
-          <h3 className="font-medium text-xl">Today's trends</h3>
+          <h3 className="font-medium text-xl">Today&apos;s trends</h3>
           <p className="text-sm text-gray-400 mb-1">as of {currentDate}</p>
           <OverviewChart chartData={chartData} />
         </div>

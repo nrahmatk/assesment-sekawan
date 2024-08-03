@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaSort } from "react-icons/fa";
-import { useOutsideClick } from "@/hooks/useOutsideClick"; // Import hook
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
 interface SortButtonProps {
   onSortChange: (sort: string) => void;
@@ -10,7 +10,6 @@ const SortButton: React.FC<SortButtonProps> = ({ onSortChange }) => {
   const [showSortMenu, setShowSortMenu] = React.useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Use the custom hook to handle clicks outside
   useOutsideClick(ref, () => setShowSortMenu(false));
 
   return (

@@ -18,7 +18,6 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
   const [showFilterMenu, setShowFilterMenu] = React.useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Use the custom hook to handle clicks outside
   useOutsideClick(ref, () => setShowFilterMenu(false));
 
   return (

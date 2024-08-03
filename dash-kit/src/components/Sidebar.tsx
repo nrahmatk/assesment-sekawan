@@ -1,4 +1,3 @@
-// Sidebar.js
 import React, { useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { FaBars, FaTimes } from "react-icons/fa";

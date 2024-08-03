@@ -47,7 +47,8 @@ export default function Login() {
         <h2 className="text-lg font-medium text-center text-gray-400">
           Dashboard Kit
         </h2>
-        <p className="text-2xl font-medium text-center text-p-black mt-7 mb-3">
+        <p className="tex  // Use the custom hook to handle clicks outside
+t-2xl font-medium text-center text-p-black mt-7 mb-3">
           Log In to Dashboard Kit
         </p>
         <p className="text-sm text-center text-gray-400">
@@ -120,7 +121,7 @@ export default function Login() {
           </button>
         </form>
         <p className="mt-6 text-center text-sm text-gray-400">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link href="/signup" className="text-blue-600 font-medium hover:underline">
             Sign up
           </Link>
